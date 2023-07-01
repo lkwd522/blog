@@ -95,6 +95,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.12.0)
+    friendly_id (5.5.0)
+      activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -227,6 +229,10 @@ DEPENDENCIES
   capybara
   debug
   devise
+<<<<<<< HEAD
+=======
+  friendly_id (~> 5.4)
+>>>>>>> d11afff (Добавил ЧПУ)
   importmap-rails
   jbuilder
   mysql2
