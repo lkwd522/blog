@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_HOST=localhost
+      - DATABASE_HOST=db
       - DATABASE_USERNAME=lockwood
       - DATABASE_PASSWORD=qwe123qwe
       - DATABASE_NAME=db1
