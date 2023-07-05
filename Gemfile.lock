@@ -229,10 +229,7 @@ DEPENDENCIES
   capybara
   debug
   devise
-<<<<<<< HEAD
-=======
   friendly_id (~> 5.4)
->>>>>>> d11afff (Добавил ЧПУ)
   importmap-rails
   jbuilder
   mysql2

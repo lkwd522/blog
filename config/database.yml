@@ -4,7 +4,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: lockwood
   password: qwe123qwe
-  host: localhost
+  host: db
+  database: db1
+  socket: /var/run/mysqld/mysqld.sock   
 
 development:
   <<: *default

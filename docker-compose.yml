@@ -1,0 +1,38 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/blog
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=localhost
+      - DATABASE_USERNAME=lockwood
+      - DATABASE_PASSWORD=qwe123qwe
+      - DATABASE_NAME=db1
+    networks:
+      - my_network
+  db:
+    image: mysql:latest
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwe123qwe
+      - MYSQL_DATABASE=db1
+      - MYSQL_USER=lockwood
+      - MYSQL_PASSWORD=qwe123qwe
+    networks:
+      - my_network
+
+networks:
+  my_network:
+
+volumes:
+  mysql_data:
+
