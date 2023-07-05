@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @article = Article.friendly.find(params[:article_slug])
     @comment = @article.comments.create(comment_params)
-  redirect_back(fallback_location: article_path(@article)) 
+    redirect_back(fallback_location: article_path(@article))
   end
 
   def destroy
@@ -12,6 +12,10 @@ class CommentsController < ApplicationController
     redirect_back(fallback_location: article_path(@article))
   end
 
+  def show
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+  end
 
   private
 
